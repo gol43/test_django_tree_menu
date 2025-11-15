@@ -4,7 +4,7 @@ from django.urls import reverse, NoReverseMatch
 
 class Menu(models.Model):
     name = models.CharField('Название меню', max_length=100, unique=True)
-    slug = models.SlugField('Слаг (для тега)', max_length=100, unique=True)
+    slug = models.SlugField('Слаг', max_length=100, unique=True)
 
     class Meta:
         verbose_name = 'Меню'
@@ -34,5 +34,5 @@ class MenuItem(models.Model):
             try:
                 return reverse(self.named_url)
             except NoReverseMatch:
-                return '#'
+                return self.url or '#'
         return self.url or '#'

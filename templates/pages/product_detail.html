@@ -1,19 +1,10 @@
 {% extends 'base.html' %}
 {% load draw_menu %}
-
 {% block title %}{{ product.title }}{% endblock %}
-
 {% block content %}
     <h1>{{ product.title }}</h1>
-    <p><strong>Цена:</strong> {{ product.price }}</p>
-    {% if product.description %}
-        <p><strong>Описание:</strong> {{ product.description|linebreaks }}</p>
-    {% endif %}
-
-    <p>
-        <a href="{% url 'products' %}">← Назад к продуктам</a>
-    </p>
-
-    <hr>
+    <p>Цена: {{ product.price }}</p>
+    <p>{{ product.description|linebreaks }}</p>
+    <a href="{% url 'products' %}">← Назад</a>
     {% draw_menu 'main_menu' %}
 {% endblock %}
