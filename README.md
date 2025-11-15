@@ -35,17 +35,25 @@
 
 2. Если решили удалять БД, то
 
-3. ```bash
-python manage.py makemigrations ```
+3. 
+```bash
+python manage.py makemigrations
+```
 
-4. ```bash
-python manage.py migrate```
+4. 
+```bash
+    python manage.py migrate
+```
 
-5. ```bash
-python manage.py createsuperuser```
+5. 
+```bash
+python manage.py createsuperuser
+```
 
-6. ```bash
-python manage.py runserver```
+6. 
+```bash
+python manage.py runserver
+```
 
 7. Зайди: `http://127.0.0.1:8000/admin/`
 
