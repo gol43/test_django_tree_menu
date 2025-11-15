@@ -1,0 +1,40 @@
+.tree-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.tree-menu li {
+    margin: 6px 0;
+}
+
+.tree-menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 6px 10px;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.tree-menu a:hover {
+    background: #f0f0f0;
+}
+
+.tree-menu .active {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.submenu {
+    padding-left: 20px;
+    border-left: 2px solid #ddd;
+    margin-left: 10px;
+}
+
+.expanded > a {
+    color: #007bff;
+    font-weight: 600;
+}

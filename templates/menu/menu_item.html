@@ -1,0 +1,18 @@
+{% load menu_extras %}
+<ul class="tree-menu">
+    {% for node in items %}
+        {% with item=node.item children=node.children %}
+        <li {% if node.is_expanded %}class="expanded"{% endif %}>
+            <a href="{{ item.get_url }}"
+               {% if node.is_active %}class="active"{% endif %}>
+                {{ item.title }}
+            </a>
+            {% if children and node.is_expanded %}
+                <div class="submenu">
+                    {% draw_menu_recursive children %}
+                </div>
+            {% endif %}
+        </li>
+        {% endwith %}
+    {% endfor %}
+</ul>

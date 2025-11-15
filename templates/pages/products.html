@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load draw_menu %}
+
+{% block title %}Продукты{% endblock %}
+
+{% block content %}
+    <h1>Наши продукты</h1>
+    {% if products %}
+        <ul>
+            {% for product in products %}
+                <li>
+                    <a href="{{ product.get_absolute_url }}">
+                        {{ product.title }}
+                    </a> — {{ product.price }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Товары скоро появятся!</p>
+    {% endif %}
+
+    <hr>
+    {% draw_menu 'main_menu' %}
+{% endblock %}

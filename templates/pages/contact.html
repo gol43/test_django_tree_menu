@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load draw_menu %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+    <h1>Контакты</h1>
+    <p>Email: example@menu.com</p>
+    <p>Телефон: +7 (999) 123-45-67</p>
+    <p>Адрес: г. Интернет, ул. Django, д. 1</p>
+
+    <hr>
+    {% draw_menu 'main_menu' %}
+{% endblock %}

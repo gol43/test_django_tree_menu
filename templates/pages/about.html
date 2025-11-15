@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load draw_menu %}
+
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+    <h1>О нас</h1>
+    <p>Мы — команда энтузиастов, создающих крутые веб-приложения на Django.</p>
+    <p>Наше меню — пример древовидной навигации с одним SQL-запросом.</p>
+
+    <hr>
+    {% draw_menu 'main_menu' %}
+{% endblock %}
